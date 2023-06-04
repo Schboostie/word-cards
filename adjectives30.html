@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Adjectives and Meanings</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    .adjective {
+      font-weight: bold;
+      color: #3366cc;
+    }
+    
+    .meaning {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Adjectives and Meanings</h1>
+  
+  <div id="adjectives-container"></div>
+
+  <script>
+    const adjectives = {
+      pernicious: "Having a harmful or destructive effect, often in a gradual or subtle way.",
+      serendipitous: "Occurring or discovered by chance in a happy or beneficial way.",
+      quixotic: "Exceedingly idealistic; unrealistic and impractical.",
+      esoteric: "Intended for or understood by only a small number of people with specialized knowledge.",
+      ebullient: "Overflowing with enthusiasm or excitement; high-spirited.",
+      insidious: "Proceeding in a gradual, subtle, or harmful way, often with negative consequences.",
+      ubiquitous: "Present, or seeming to be present, everywhere at the same time; omnipresent.",
+      mellifluous: "Sweet or musical-sounding; pleasant to hear.",
+      ephemeral: "Lasting for only a short period; fleeting.",
+      magnanimous: "Very generous or forgiving, especially toward a rival or someone less powerful.",
+      resplendent: "Shining brilliantly; radiant or splendid in appearance.",
+      incandescent: "Emitting light as a result of being heated; passionate or brilliant.",
+      idiosyncratic: "Peculiar or unique to an individual; distinctive.",
+      clandestine: "Kept or done in secret, often for illicit purposes.",
+      ineffable: "Too great or extreme to be expressed or described in words; indescribable.",
+      egregious: "Outstandingly bad or shocking; flagrant.",
+      intransigent: "Unwilling or refusing to change one's views or to agree about something.",
+      plausible: "Seemingly reasonable or probable; credible.",
+      tenacious: "Tending to keep a firm hold of something; persistent or stubborn.",
+      erudite: "Having or showing great knowledge or learning; scholarly.",
+      sagacious: "Having or showing keen mental discernment and good judgment; wise.",
+      indomitable: "Impossible to defeat, subdue, or discourage; invincible.",
+      effervescent: "Bubbly or fizzy; vivacious, enthusiastic, or lively.",
+      inimitable: "So unique or exceptional as to be impossible to imitate or copy.",
+      sublime: "Of such excellence, beauty, or grandeur as to inspire awe or admiration.",
+      peremptory: "Insisting on immediate attention or obedience; commanding.",
+      sardonic: "Mocking, cynical, or scornful in a humorous or bitter way.",
+      querulous: "Complaining in a whining or petulant manner; irritable.",
+      reticent: "Not revealing one's thoughts or feelings readily; reserved or reluctant.",
+      verbose: "Using more words than necessary; wordy or long-winded."
+    };
+
+    const container = document.getElementById("adjectives-container");
+
+    for (let adjective in adjectives) {
+      const meaning = adjectives[adjective];
+      const adjectiveElement = document.createElement("div");
+      adjectiveElement.innerHTML = `<span class="adjective">${adjective}:</span> ${meaning}`;
+      adjectiveElement.classList.add("meaning");
+      container.appendChild(adjectiveElement);
+    }
+  </script>
+</body>
+</html>
